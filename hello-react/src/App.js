@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Hello } from './Hello';
+import { Hello, HelloDesactivable } from './Hello';
 import { Clock } from './Clock';
 import { ClockDesactivable } from './ClockDesactivable';
 import { FormPrenom } from './FormPrenom';
@@ -15,9 +15,9 @@ class App extends Component {
         {/* <Hello name={123} /> */}
         <Clock format="HH:mm:ss" />
         <ClockDesactivable />
+        <HelloDesactivable name="Romain" show={true} />
         <FormPrenom />
         <LiftedState />
-        <HelloList />
       </div>
     );
   }

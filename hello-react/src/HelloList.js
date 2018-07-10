@@ -1,15 +1,19 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Hello } from './Hello';
 import uuid from 'uuid';
 
-export class HelloList extends Component {
-  state = {
-    prenoms: ['Romain', 'Edouard'],
-  };
+export class HelloList extends PureComponent {
+  
+  /*
+  shouldComponentUpdate(nextProps) {
+    return this.props.prenoms !== nextProps.prenoms;
+  }
+  */
 
   render() {
+    console.log('render HelloList');
     const helloList = 
-      this.state.prenoms
+      this.props.prenoms
         .map((prenom) => <Hello name={prenom} key={uuid()} />);
 
     return (

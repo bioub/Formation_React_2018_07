@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class FormPrenomLifted extends Component {
 
@@ -21,5 +22,9 @@ class FormPrenomLifted extends Component {
     );
   }
 }
+
+FormPrenomLifted.propTypes = {
+  handlePrenom: PropTypes.func.isRequired,
+};
 
 export { FormPrenomLifted };

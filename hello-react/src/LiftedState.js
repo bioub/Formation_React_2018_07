@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { FormPrenomLifted } from './FormPrenomLifted';
 import { Hello } from './Hello';
+import { HelloList } from './HelloList';
 
 export class LiftedState extends Component {
 
   state = {
-    prenom: '',
+    prenoms: [''],
   };
 
   handlePrenom = (prenom) => {
+    const prenoms = [...this.state.prenoms, prenom];
     this.setState({
-      prenom,
+      prenoms
     });
   };
 
@@ -19,7 +21,7 @@ export class LiftedState extends Component {
       <div>
         <h2>LiftedState</h2>
         <FormPrenomLifted handlePrenom={this.handlePrenom} />
-        <Hello name={this.state.prenom} />
+        <HelloList prenoms={this.state.prenoms} />
       </div>
     );
   }

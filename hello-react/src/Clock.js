@@ -11,7 +11,7 @@ export class Clock extends Component {
 
   componentDidMount() {
     this._intervalId = setInterval(() => {
-      this.setState({
+      this.setState({ // merge (du premier niveau, pas récursif) avec le state actuel
         now: new Date(),
       });
     }, 1000);
