@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "hello-react"
+		},
+		{
+			"path": "hello-redux"
+		},
+		{
+			"path": "javascript-langage"
+		},
+		{
+			"path": "address-book"
+		}
+	],
+	"settings": {}
+}

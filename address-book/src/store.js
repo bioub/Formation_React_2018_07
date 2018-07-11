@@ -1,13 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { counts, prenom, users } from './reducers';
 import thunk from 'redux-thunk';
+import { contacts } from './contacts/reducers';
 
 export const store = createStore(
   combineReducers({
-    counts,
-    prenom,
-    users,
+    contacts,
   }),
   // preloadedState,
   composeWithDevTools(

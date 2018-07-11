@@ -4,13 +4,23 @@ import React, { Component } from 'react';
 export function desactivable(WrappedComponent) {
 
   class InnerComponent extends Component {
+    state = {
+      show: this.props.show,
+    }
+
+    handleClick = () => {
+      this.setState((prevState) => ({
+        show: !prevState.show,
+      }));
+    }
+
     render() {
       // filtre les propriétés du HOC, et celle du composant imbriqué (innerProps)
       const {show, ...innerProps} = this.props;
       return (
         <div>
-          {show && <WrappedComponent {...innerProps} />}
-          <button>Toggle</button>
+          {this.state.show && <WrappedComponent {...innerProps} />}
+          <button onClick={this.handleClick}>Toggle</button>
         </div>
       )
     }

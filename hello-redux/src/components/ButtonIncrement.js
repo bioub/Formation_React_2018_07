@@ -7,6 +7,7 @@ const ButtonIncrement = ({ count, increment }) => (
 
 ButtonIncrement.propTypes = {
   count: PropTypes.number.isRequired,
+  increment: PropTypes.func.isRequired,
 };
 
 export { ButtonIncrement };

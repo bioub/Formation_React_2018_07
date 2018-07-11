@@ -1,4 +1,4 @@
-import { BUTTON_INCREMENT, PRENOM_CHANGE } from '../constants';
+import { BUTTON_INCREMENT, PRENOM_CHANGE, USERS_RECEIVED } from '../constants';
 
 export function count(state = 0, {type, step}) {
   switch (type) {
@@ -26,6 +26,15 @@ export function prenom(state = '', {type, value}) {
   switch (type) {
     case PRENOM_CHANGE:
       return value;
+  }
+
+  return state;
+}
+
+export function users(state = [], {type, users}) {
+  switch (type) {
+    case USERS_RECEIVED:
+      return users;
   }
 
   return state;

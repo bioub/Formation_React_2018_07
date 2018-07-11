@@ -6,11 +6,11 @@ Le state de Redux devra avoir la forme suivante :
 
 ```
 {
-  newTodo: 'Acheter de';
+  newTodo: 'Acheter de',
   todos: [
     'Faire les courses',
     'Acheter du pain',
-  ];
+  ]
 }
 ```
 
