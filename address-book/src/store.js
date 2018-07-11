@@ -9,7 +9,7 @@ export const store = createStore(
   }),
   // preloadedState,
   composeWithDevTools(
-    applyMiddleware(thunk)
+    applyMiddleware(thunk),
   ),
 );
 

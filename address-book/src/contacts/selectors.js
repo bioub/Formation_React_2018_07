@@ -7,6 +7,8 @@ export const selectContacts = createSelector(
   (contacts) => contacts.data,
 );
 
+export const selectContactsById = (state, id) => selectContactState(state).data.find((item) => item.id === id);
+
 export const selectContactsIsFetching = createSelector(
   selectContactState,
   (contacts) => contacts.isFetching,
